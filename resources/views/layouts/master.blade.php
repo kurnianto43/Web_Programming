@@ -14,7 +14,11 @@
 	<!-- Style css/bootstrap -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!-- style tambahan -->
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <!-- link fixed bug glypicon bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 
         <!-- Fonts -->
@@ -59,6 +63,5 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-	}
 </body>
 </html>
