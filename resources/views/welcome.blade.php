@@ -8,7 +8,7 @@
         <title>Esp Banjarbaru</title>
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 
@@ -22,10 +22,19 @@
                 <div class="navbar-header">
                   <a class="navbar-brand" href="#">ESP Banjarbaru</a>
                 </div>
+                @if (Route::has('login'))
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                </ul>
+                 
+                     @auth
+                         <a href="{{ url('/home') }}">Berandai</a>
+                     @else
+                         <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                         <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                     @endauth
+                 
+            </ul>
+             @endif
+                
               </div>
             </nav>
         </div>
