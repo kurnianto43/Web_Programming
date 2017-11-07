@@ -19,17 +19,15 @@
 
     <!-- link fixed bug glypicon bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lobster+Two|Roboto" rel="stylesheet">
 </head>
 <body>
-	<div class="container-fluid">
+	<div id="navigasi" class="container-fluid">
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">ESP Banjarbaru</a>
+		      <a id="webname" class="navbar-brand" href="{{ url('/') }}">ESP Banjarbaru</a>
 		    </div>
 		    <ul class="nav navbar-nav">
 		      <li class="active"><a href="#">Home</a></li>
@@ -51,8 +49,31 @@
 
 		    </ul>
 		    <ul class="nav navbar-nav navbar-right">
-		      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-		      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		    	@guest
+		      <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+		      <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+		      @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
 		    </ul>
 		  </div>
 		</nav>
