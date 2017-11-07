@@ -1,11 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">Selamat Datang {{ Auth::user()->name }}</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,10 +14,10 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Anda Berhasil Login...
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </div> <!-- end of col -->
+    </div> <!-- end of row -->
+</div> <!-- end of container -->
 @endsection

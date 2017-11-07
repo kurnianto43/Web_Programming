@@ -27,9 +27,9 @@
 		      <a id="webname" class="navbar-brand" href="{{ url('/') }}">ESP Banjarbaru</a>
 		    </div>
 		    <ul class="nav navbar-nav">
-		      	<li class="active"><a href="#">Home</a></li>
+		      	<li class="active"><a href="{{ url('/home') }}">Home</a></li>
 		      	<li><a href="#">GDM</a></li>
-		      	<li><a href="#">Spare Parts</a></li>
+		      	<li><a href="{{ url('/spp') }}">Spare Parts</a></li>
 		      	<li><a href="#">Employers</a></li>
 			  	<li class="dropdown">
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Files<span class="caret"></span></a>
