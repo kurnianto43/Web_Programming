@@ -25,28 +25,18 @@
                 <div class="navbar-header">
                   <a id="webname" class="navbar-brand" href="{{ url('/') }}">ESP Banjarbaru</a>
                 </div>
-                @if (Route::has('login'))
                 <ul class="nav navbar-nav navbar-right">
-                 
-                     @auth
-                         <li><a href="{{ url('/home') }}">Home</a></li>
-                     @else
                          <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                          <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sing Up</a></li>
-                     @endauth
                  
-            </ul>
-             @endif
+                </ul>
                 
               </div>
             </nav>
         </div>
-        <div class="container-fluid">
-          <div class="jumbotron">
-            <h1>ESP BANJARBARU</h1> 
-            <p>External Service Provider Of The Coca-Cola Company</p> 
-          </div>
-        </div>
+
+    @yield('content')
+
     <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

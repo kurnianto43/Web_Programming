@@ -46,8 +46,8 @@
 
 		    <ul class="nav navbar-nav navbar-right">
 		    	@guest
-		      		<li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 		      		<li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		      		<li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sing Up</a></li>
 
 		      	@else
                     <li class="dropdown">

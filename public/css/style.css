@@ -6,6 +6,7 @@
 #webname {
 	font-family: 'Lobster Two', cursive;
 	font-size: 27px;
+	color: #f53240;
 }
 
 #drop-files li a {
@@ -18,4 +19,8 @@
 
 body {
 	background-image: url(img/bg.png);
+}
+
+.jumbotron {
+	text-align: center;
 }
