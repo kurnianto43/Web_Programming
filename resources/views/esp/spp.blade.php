@@ -6,7 +6,8 @@
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<h2>Daftar Spare Parts</h2>
-					<table class="table table-striped">
+				<br>
+					<table class="table table-hover">
 					  <thead>
 					    <tr>
 					      <th scope="col">#</th>
