@@ -7,3 +7,11 @@
 	font-family: 'Lobster Two', cursive;
 	font-size: 27px;
 }
+
+#drop-files li a {
+	font-size: 15px; 
+}
+
+.logout li a {
+	font-size: 15px;
+}
