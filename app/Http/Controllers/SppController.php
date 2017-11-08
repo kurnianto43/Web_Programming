@@ -9,7 +9,9 @@ class SppController extends Controller
 {
     public function index()
     {
-        return view('esp.spp.spp');
+        $parts = Part::all();
+
+        return view('esp.spp.spp', compact('parts'));
     }
 
     public function create()

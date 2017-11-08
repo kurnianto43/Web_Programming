@@ -1,46 +1,41 @@
 @extends('layouts.master')
 
 @section('content')
-
+	
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<h2>Daftar Spare Parts</h2>
 				<br>
+				
 					<table class="table table-hover">
 					  <thead>
 					    <tr>
-					      <th scope="col">#</th>
-					      <th scope="col">First Name</th>
-					      <th scope="col">Last Name</th>
-					      <th scope="col">Username</th>
+					      <th scope="col">No</th>
+					      <th scope="col">Nomor Spare Part</th>
+					      <th scope="col">Nama Spare Part</th>
+					      <th scope="col">Jumlah</th>
+					      <th scope="col">Remarks</th>
+
 					    </tr>
 					  </thead>
-					  <tbody>
+					 @foreach ($parts as $part)
+					 <tbody>
 					    <tr>
-					      <th scope="row">1</th>
-					      <td>Mark</td>
-					      <td>Otto</td>
-					      <td>@mdo</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">2</th>
-					      <td>Jacob</td>
-					      <td>Thornton</td>
-					      <td>@fat</td>
-					    </tr>
-					    <tr>
-					      <th scope="row">3</th>
-					      <td>Larry</td>
-					      <td>the Bird</td>
-					      <td>@twitter</td>
-					    </tr>
+					      <td>{{ $part -> id }}</td>
+					      <td>{{ $part -> no_spp }}</td>
+					      <td>{{ $part -> nama_spp }}</td>
+					      <td>{{ $part -> jumlah }}</td>
+					      <td>{{ $part -> remarks }}</td>
+					    </tr>  
 					  </tbody>
+					  @endforeach 
 					</table>
+					
 
 					<a href="{{ route('spp.create') }}" class="btn btn-primary">Tambah Data</a>
 			</div>
 		</div>
 	</div>
-
+	
 @endsection
