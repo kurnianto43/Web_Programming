@@ -38,7 +38,7 @@
 					  </tbody>
 					</table>
 
-					<a href="#" class="btn btn-primary">Tambah Data</a>
+					<a href="{{ route('spp.create') }}" class="btn btn-primary">Tambah Data</a>
 			</div>
 		</div>
 	</div>
