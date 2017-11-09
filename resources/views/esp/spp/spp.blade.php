@@ -4,10 +4,10 @@
 	
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<h2>Daftar Spare Parts</h2>
-				<br>
-				
+			<div class="col-md-12">
+				<div class="panel panel-default">
+				<div class="panel-heading"><h2>Data Spare Part</h2></div>
+					<div class="panel-body">
 					<table class="table table-hover">
 					  <thead>
 					    <tr>
@@ -30,10 +30,10 @@
 					    </tr>  
 					  </tbody>
 					  @endforeach 
-					</table>
-					
-
+					</table>	
 					<a href="{{ route('spp.create') }}" class="btn btn-primary">Tambah Data</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

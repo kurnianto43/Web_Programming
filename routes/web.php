@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/spp', 'SppController@index');
+Route::get('/spp', 'SppController@index')->name('spp.index');
 Route::get('/spp/create', 'SppController@create')->name('spp.create');
 Route::post('/spp/create', 'SppController@store')->name('spp.store');
 Route::get('/spp/{id}/edit', 'SppController@edit')->name('spp.edit');

@@ -31,7 +31,7 @@ class SppController extends Controller
     		  'remarks'=>request('remarks')
     	   ]);
 
-            return redirect('/spp');
+            return redirect()->route('spp.index');
         }
 
 
@@ -39,12 +39,21 @@ class SppController extends Controller
         {
             $part = Part::find($id);
 
-            return view('esp.spp.edit', compact('post'));
+            return view('esp.spp.edit', compact('part'));
         }
 
 
-        public function update()
+        public function update($id)
         {
+            $part = Part::find($id);
 
+            $part -> update([
+                'no_spp' => request('no_spp'),
+                'nama_spp' => request('nama_spp'),
+                'jumlah' => request('jumlah'),
+                'remarks' => request('remarks')
+            ]);
+
+            return redirect()->route('spp.index');
         }
 }

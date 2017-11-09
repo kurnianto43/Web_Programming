@@ -32,7 +32,7 @@
                          <li><a href="{{ url('/home') }}">Home</a></li>
                      @else
                          <li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                         <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sing Up</a></li>
+                         <li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                      @endauth
                  
             </ul>
