@@ -20,5 +20,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/spp', 'SppController@index')->name('spp.index');
 Route::get('/spp/create', 'SppController@create')->name('spp.create');
 Route::post('/spp/create', 'SppController@store')->name('spp.store');
-Route::get('/spp/{id}/edit', 'SppController@edit')->name('spp.edit');
-Route::patch('/spp/{id}/edit', 'SppController@update')->name('spp.update');
+Route::get('/spp/{part}/edit', 'SppController@edit')->name('spp.edit');
+Route::patch('/spp/{part}/edit', 'SppController@update')->name('spp.update');
+Route::delete('/spp/{part}/delete', 'SppController@destroy')->name('spp.destroy');

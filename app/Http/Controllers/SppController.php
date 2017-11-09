@@ -35,17 +35,15 @@ class SppController extends Controller
         }
 
 
-        public function edit($id)
+        public function edit(Part $part)
         {
-            $part = Part::find($id);
 
             return view('esp.spp.edit', compact('part'));
         }
 
 
-        public function update($id)
+        public function update(Part $part)
         {
-            $part = Part::find($id);
 
             $part -> update([
                 'no_spp' => request('no_spp'),
@@ -53,6 +51,13 @@ class SppController extends Controller
                 'jumlah' => request('jumlah'),
                 'remarks' => request('remarks')
             ]);
+
+            return redirect()->route('spp.index');
+        }
+
+        public function destroy(Part $part)
+        {
+            $part->delete();
 
             return redirect()->route('spp.index');
         }

@@ -17,7 +17,7 @@
     <!-- link fixed bug glypicon bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato|Lobster+Two|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Lato|Lobster+Two|Roboto" rel="stylesheet">
 </head>
 <body>
 	<div id="navigasi" class="container-fluid">
@@ -27,7 +27,7 @@
 		      <a id="webname" class="navbar-brand" href="{{ url('/') }}">ESP Banjarbaru</a>
 		    </div>
 		    <ul class="nav navbar-nav">
-		      	<li class="active"><a href="{{ url('/home') }}">Home</a></li>
+		      	<li class="active"><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-home"></span></a></li>
 		      	<li><a href="#">GDM</a></li>
 		      	<li><a href="{{ url('/spp') }}">Spare Parts</a></li>
 		      	<li><a href="#">Employers</a></li>
@@ -46,7 +46,7 @@
 
 		    <ul class="nav navbar-nav navbar-right">
 		    	@guest
-		      		<li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		      		<li><a href="{{ route('login') }}"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
 		      		<li><a href="{{ route('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
 		      	@else
