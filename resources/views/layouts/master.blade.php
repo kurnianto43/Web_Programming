@@ -27,9 +27,17 @@
 		      <a id="webname" class="navbar-brand" href="{{ url('/') }}">ESP Banjarbaru</a>
 		    </div>
 		    <ul class="nav navbar-nav">
-		      	<li class="active"><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-home"></span></a></li>
-		      	<li><a href="#">GDM</a></li>
-		      	<li><a href="{{ url('/spp') }}">Spare Parts</a></li>
+		      	<li class="{{ Request::is('home') ? 'active' : '' }}"><a href="{{ url('/home') }}"><span class="glyphicon glyphicon-home"></span></a></li>
+		      	<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="#">GDM</a></li>
+		      	<li class="{{ Request::is('spp', 'spp/create') ? 'active' : '' }}"><a href="{{ url('/spp') }}">Spare Parts</a></li>
+		      	<li class="dropdown">
+		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Activity<span class="caret"></span></a>
+		        	<ul id="drop-files" class="dropdown-menu">
+		          		<li><a href="#">Workshop</a></li>
+		          		<li><a href="#">Field Service</a></li>
+		          		<li><a href="#">EPC</a></li>
+		        	</ul>
+		      	</li>
 		      	<li><a href="#">Employers</a></li>
 			  	<li class="dropdown">
 		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Files<span class="caret"></span></a>

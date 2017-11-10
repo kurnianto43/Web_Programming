@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace EspBjb\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Part;
+use EspBjb\Part;
 
 class SppController extends Controller
 {
